@@ -1,0 +1,78 @@
+<?php
+
+include '_class/cms_class.php';
+
+include '_class/db-conf.php';
+?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>pulsir &bull; the simple content share</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+    
+   </head>
+   <body>
+
+				
+			              
+
+<div class="pageContent">
+    <div id="main">
+      <div class="container">
+        <h1><img src="img/pulsirlogo-cropped-small.png" alt="oops." /></h1>
+        <h2><b>write</b><i>anything</i></h2>
+        <a href="index.php">Naslovna </a> | <a href="user/index.php">/user</a> | 
+        		                 
+                    		
+				<a href="forumator-redir.php">forumator </a> | <a href="blag-redir.php">dev blag </a>
+        </div>
+        				
+                    
+                    
+						
+<div id="cse-search-form" style="width: 100%;">Loading</div>
+<script src="//www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : 'hr', style : google.loader.themes.MINIMALIST});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '002291651113332689802:ccy0zh1tm0c', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.enableSearchboxOnly("http://www.google.com/cse?cx=002291651113332689802:ccy0zh1tm0c");
+    customSearchControl.draw('cse-search-form', options);
+  }, true);
+</script>
+
+<style type="text/css">
+  input.gsc-input {
+    border-color: #BBBBBB;
+  }
+  input.gsc-search-button {
+    border-color: #000000;
+    background-color: #333333;
+  }</style>
+			</div>
+            
+        
+        <div class="container">
+        
+         <?php
+	if(isset($_GET['id'])):
+		$obj->read_content($_GET['id']);
+	else:
+		$obj->get_content();
+	endif;
+?>
+      <div class="container tutorial-info">
+     This is Pulsir. | <a href="http://j.mp/KKperH">TOS</a> | <!--VlexoFree_LinkBack--> <!--VlexoFree_AdCode_728x90-->    </div>
+    </div>
+</div>
+
+</body>
+</html>

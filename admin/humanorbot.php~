@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UFT-8" />
+<title>/user</title>
+<link rel="stylesheet" href="../style.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="../demo.css" media="screen" />
+
+</head>
+<body>
+
+<div id="main">
+ <script type="text/javascript">
+ var RecaptchaOptions = {
+    theme : 'clean'
+ };
+ </script>
+     <form method="post" action="verify.php">
+        <?php
+          require_once('recaptchalib.php');
+          $publickey = "6LeVDtESAAAAAORL13yfK2tpc17EOdLs_Ps9UuO8"; // you got this from the signup page
+          echo recaptcha_get_html($publickey);
+        ?>
+        <input type="submit" />
+      </form>
+
+
+</div>
+
+
+</body>
+<html>
