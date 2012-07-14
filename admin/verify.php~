@@ -1,18 +1,1 @@
- <?php
-  require_once('recaptchalib.php');
-  $privatekey = "6LeVDtESAAAAACabam6tqWZEGd-vAVR3Z67ta1oA";
-  $resp = recaptcha_check_answer ($privatekey,
-                                $_SERVER["REMOTE_ADDR"],
-                                $_POST["recaptcha_challenge_field"],
-                                $_POST["recaptcha_response_field"]);
-
-  if (!$resp->is_valid) {
-    // What happens when the CAPTCHA was entered incorrectly
-    die ("HALP!!! HALP!!! 123, 123. Houston, we have a problem! NIJE COVJEK! STO LI JE? DALEK?!." .
-         "(Greska: " . $resp->error . ")");
-  } else {
-    // Your code here to handle a successful verification
-include 'add-content.php';
-echo '<!--VlexoFree_AdCode_728x90-->';
-  }
-  ?>
+sry, nope.
