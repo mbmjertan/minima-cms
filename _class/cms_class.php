@@ -29,11 +29,11 @@ $return = '<p><a href="index.php">home</a></p>';
 
 		if(mysql_num_rows($res) !=0):
 		while($row = mysql_fetch_assoc($res)) {
-                        			echo '<h1 class="title"> <a href="?id=' . $row['id'] , '">'  . $row['title'] .  '</a></h1 >';
+                        			echo '<h1 class="title"> <a href="index.php?id=' . $row['id'] , '">'  . $row['title'] .  '</a></h1 >';
                         echo '<p class="meta"><span class="posted">Published by: ' .$row['author'] . '</span></p>';
 echo '<p>' . $row['body'] , '</p> ';
                         echo '<div style="clear: both;">&nbsp;</div>';
-                        echo '<p class="links"><a href="?id=' . $row['id'] , '">Permalink // <a> <a href="?id=' . $row['id'] , '#disqus_thread">Comments</a></p>';
+                        echo '<p class="links"><a href="index.php?id=' . $row['id'] , '">Permalink // <a> <a href="index.php?id=' . $row['id'] , '#disqus_thread">Comments</a></p>';
                        
 		}
 		else:
@@ -60,11 +60,11 @@ $return = '<p><a href="index.php">home</a></p>';
 
 		if(mysql_num_rows($res) !=0):
 		while($row = mysql_fetch_assoc($res)) {
-                        			echo '<h1 class="title"> <a href="?id=' . $row['id'] , '">'  . $row['title'] .  '</a></h1>';
+                        			echo '<h1 class="title"> <a href="index.php?id=' . $row['id'] , '">'  . $row['title'] .  '</a></h1>';
                         echo '<p class="meta"><span class="posted">Objavio/la: ' .$row['author'] . '</span></p>';
                         echo '<div style="clear: both;">&nbsp;</div>';
 echo '<p>' . $row['body'] , '</p> ';
-			                        echo '<p class="links"><a href="?id=' . $row['id'] , '">Permalink <a></p>';
+			                        echo '<p class="links"><a href="index.php?id=' . $row['id'] , '">Permalink <a></p>';
 include 'comm.php';
                        
                        
